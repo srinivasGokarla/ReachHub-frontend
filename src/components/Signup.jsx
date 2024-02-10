@@ -28,7 +28,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://reachhub-blig.onrender.com/register', formData);
+      const response = await axios.post('https://backend-uvlx.onrender.com/register', formData);
 
       console.log(response.data);
       alert('Registration successfully');

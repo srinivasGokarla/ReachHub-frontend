@@ -13,7 +13,7 @@ const Dashboard = () => {
   const handleLogout = async () => {
     if (localStorage.getItem('authToken') !== null) {
       try {
-        const response = await fetch('https://reachhub-blig.onrender.com/logout', {
+        const response = await fetch('https://backend-uvlx.onrender.com/logout', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
@@ -60,7 +60,7 @@ const Dashboard = () => {
 
   const fetchTopPlayers = async () => {
     try {
-      const response = await axios.get('https://reachhub-blig.onrender.com/top-players', {
+      const response = await axios.get('https://backend-uvlx.onrender.com/top-players', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
         }
@@ -77,7 +77,7 @@ const Dashboard = () => {
 
   const handleDownloadCsv = async () => {
     try {
-      const response = await axios.get('https://reachhub-blig.onrender.com/players/rating-history-csv', {
+      const response = await axios.get('https://backend-uvlx.onrender.com/players/rating-history-csv', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
         },
